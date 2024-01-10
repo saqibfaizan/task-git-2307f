@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <style>
+    form{
+        background-image: url();
+    }
+    body{
+        background-color: black;
+    }
+  </style>
+  <body>
+    <br><br><br><br>
+        <form action="bootstrape.html" method="post" class="col-sm-4 m-auto">
+          <h1 style="color: white; font-family: cursive; text-align: center; " class="bg-info rounded-lg text align">SINGUP FORM</h1>
+           <label for="">user name</label>
+           <input type="text" class="form-control mt-2" id="name" placeholder="Enter your name">
+           <div id="d1"></div>
+           <label for="">password</label>
+           <input type="password" class="form-control mt-2" id="pass" placeholder="Enter your password">
+           <div id="d2"></div>
+           <label for="">confirm password</label>
+           <input type="password" class="form-control mt-2" id="cpass"  placeholder="Enter your confirm password">
+           <div id="d3"></div>
+           <br><br>
+           <input type="submit" id="btn" class="btn btn-danger mt-2">
+          </form>
+          <script>
+           $('#btn').click(function(){
+            name = $('#name').val();
+            pwd = $('#pass').val();
+            c_pass = $('#cpass').val();
+            if(name == ""){
+                $('#d1').html("please fill this field first ");
+                 $('#d1').css('color','red');
+                 $('#d1').css('fontfamily','cursive');
+                 return false;
+            }
+            else if(pwd == ""){
+                $('#d2').html("please fill this field first ");
+                 $('#d2').css('color','red');
+                 $('#d2').css('fontfamily','cursive');
+                 return false;
+
+            }
+            else if(c_pass == ""){
+                $('#d3').html("please fill this field first ");
+                 $('#d3').css('color','red');
+                 $('#d3').css('fontfamily','cursive');
+                 return false;
+            }
+
+            
+            else if(name.lenght <=3){
+                $('#d1').html("character should be greater then 3 ");
+                 $('#d1').css('color','red');
+                 $('#d1').css('fontfamily','cursive');
+                 return false;
+            }
+            else if(pwd.lenght <=7){
+                $('#d2').html("character should be greater then 7 ");
+                 $('#d2').css('color','red');
+                 $('#d2').css('fontfamily','cursive');
+                 return false;
+
+            }
+            else if(pwd !== c_pass){
+                $('#d3').html("confirm password must be same password");
+                 $('#d3').css('color','red');
+                 $('#d3').css('fontfamily','cursive');
+                 return false;
+            }
+           }); 
+          </script>
+ 
+
+
+
+
+
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
